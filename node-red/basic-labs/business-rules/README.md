@@ -27,9 +27,11 @@ Create a Node-RED App instance on Bluemix. Node-RED is built upon a Node.js serv
 ![Create a Node-RED app on Bluemix](images/create-instance.png)
 
 Open your Node-RED app using the routes link.
+
 ![open-instance-nodered](images/open-instance-nodered.png)
 
 Browse the Node palette. You will find many nodes that help to integrate/consume many flows from small devices, API or services.
+
 ![palette.png](images/palette.png)
 
 New to Node-RED ? please read this [Introduction to Node-RED](https://github.com/watson-developer-cloud/node-red-labs/blob/master/introduction_to_node_red/README.md) and follow the Bluemix section. (Node-RED is a framework that can be deployed on small devices, a laptop or in the cloud)
@@ -57,6 +59,7 @@ Bind the Business Rules and the Watson Language Translation service instances to
 Open your TV Series application, and configure your Twitter credentials.
 You should be ok at this point.
 Now to see the real time Ranking enter the following URL : http://[APP-NAME]/ranking 
+
 Note : replace APP-NAME by your unique application name.
 
 ### Step 7
