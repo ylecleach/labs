@@ -57,7 +57,10 @@ Bind the Business Rules and the Watson Language Translation service instances to
 
 ### Step 6
 Open your TV Series application, and configure your Twitter credentials.
-You should be ok at this point.
+You should and you should have the following Flow properly configured and ready for usage.
+
+![Final Overview](images/final-overview.png)
+
 Now to see the real time Ranking enter the following URL : http://[APP-NAME]/ranking 
 
 Note : replace APP-NAME by your unique application name.
