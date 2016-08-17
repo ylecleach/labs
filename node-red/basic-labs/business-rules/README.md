@@ -23,7 +23,15 @@ Connect to your account with your new credentials
 For this tutorial we assume that we are using the 'dev' "space".
 
 ### Step 2
-Create a Node-RED instance
+Create a Node-RED App instance on Bluemix. Node-RED is built upon a Node.js server runtime.
+![Create a Node-RED app on Bluemix](images/create-instance.png)
+
+Open your Node-RED app using the routes link.
+![open-instance-nodered](images/open-instance-nodered.png)
+
+Browse the Node palette. You will find many nodes that help to integrate/consume many flows from small devices, API or services.
+![palette.png](images/palette.png)
+
 New to Node-RED ? please read this [Introduction to Node-RED](https://github.com/watson-developer-cloud/node-red-labs/blob/master/introduction_to_node_red/README.md) and follow the Bluemix section. (Node-RED is a framework that can be deployed on small devices, a laptop or in the cloud)
 
 ### Step 3
@@ -56,7 +64,7 @@ Share your ranking with your family, friends and collegues. Enjoy !
 ![Ranking](images/ranking.png)
 
 ## Want to customize this demo for your needs ...
-- you need to update the Twitter node hashtags
+- you need to update the Twitter node hashtags list
 - you need to update this Rule Project using Rule Designer. See Installation node and the Business Rules tutorial on Bluemix.
 - redeploy a new version of the rulesets on your Business Rules service instance
 
