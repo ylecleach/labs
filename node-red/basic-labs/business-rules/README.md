@@ -18,7 +18,8 @@ The Business Rules node simplify the discovery, integration and test of a Decisi
 - Use JSON or XML payload in input/output.
 - **New** : add a one click Test and Debug feature for a given Decision Service, so easing the discovery, test, debugging and integration of business rulesets.
 
-![Business Rules node overview](images/BR-node-overview.png)
+![Business Rules node sample flow](images/simple-flow.png)
+![Business Rules node Edit](images/edit-BR-node.png)
 
 ## Tutorial
 
