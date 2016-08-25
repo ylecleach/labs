@@ -2,7 +2,9 @@
 ## using Twitter + sentiment analysis + Watson Translate Language
 
 ## Overview
-Today, TV Series are mainstream, and it is very difficult to choose what will be your next TV Series based on the sentiment of people on twitter. This tutorial will show you how to build this tool using IBM Bluemix platform and you use the following technologies :
+Today, TV Series are more successful than movies, and new TV Series appears nearly every day. To help you to choose what will be your next TV series, we propose to build a Bluemix application called TV Series Finder, that will determine how next TV Series compares with your favorite ones, based on the people sentiment on Twitter.
+
+This tutorial will show you how to build application using IBM Bluemix platform and you will use the following technologies :
 - IBM Bluemix : the digital innovation platform.
 - Node-RED : an open source tool to develop Internet applications easily by wiring nodes that input/output flows from small devices (Internet of Things), APIs, many services.
 - IBM Business Rules for Bluemix : enables developers to spend less time recoding and testing when the business policy changes by keeping business logic separate from application logic
@@ -10,10 +12,13 @@ Today, TV Series are mainstream, and it is very difficult to choose what will be
 - Twitter : you will need a Twitter account for this demo as the Twitter node is using in its implement the Twitter Streaming API.
 
 ## About the Business Rules node
-The Business Rules node simplify the integration of a Business Rules execution calls : 
-- select one of the available Rulesets for the selected Business Rules instance.
-- Use JSON or XML payload in input/output
-- Other cool feature : generate XML or JSON payload sample from the selected rulesets.
+The Business Rules node simplify the discovery, integration and test of a Decision Service deployed on IBM Business Rules for Bluemix service : 
+- Spend less time recoding and testing when the business policy changes by keeping business logic separate from application logic.
+- Simplify the integration of a Business Rules execution calls : just select one of the available Rulesets for the selected Business Rules instance.
+- Use JSON or XML payload in input/output.
+- **New** : add a one click Test and Debug feature for a given Decision Service, so easing the discovery, test, debugging and integration of business rulesets.
+
+![Business Rules node overview](images/BR-node-overview.png)
 
 ## Tutorial
 
