@@ -39,7 +39,7 @@ Need help, check out [Introduction to Node-RED](https://github.com/watson-develo
 
 ### Step 4
 Create a Business Rules service instance and import the demo ruleapps containing the business rules.
-- Download the ruleapps archive [ruleApps-v87.jar](ruleApps-v87.jar) -- for internal bugfest take this one ([ruleApps-v881.jar](ruleApps-v881.jar))
+- Download the ruleapps archive [ruleApps-v87.jar](ruleApps-v87.jar)
 - Open the Business Rules Console using your Business Rules credentials
 - Use the Server Info / Restore RuleApps function. (it erases all existing rulesets in your Business Rules instance)
 - Select the ruleapps archive and click on Restore
