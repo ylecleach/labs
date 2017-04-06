@@ -1,1 +1,854 @@
-[{"id":"b47a6d4a.69a478","type":"comment","z":"8df7c3c9.81286","name":"Link to the Lab instructions (to come)","info":"See corresponding Lab instructions in the link below :\n\n[Watson Visual Recognition](https://github.com/watson-developer-cloud/node-red-labs/tree/master/basic_examples/visual_recognition_v3)\n","x":155,"y":29,"wires":[]},{"id":"14216249.919ce6","type":"comment","z":"8df7c3c9.81286","name":"Configure VR v3 nodes with the API Key !","info":"No Binding with Bluemix app is currently available for Watson Visual Recognition v3 service.\nThe API Key is available in the Bluemix Console in the Credentials section of the service detail.","x":710.5000076293945,"y":29,"wires":[]},{"id":"b5bb9cca.314388","type":"inject","z":"8df7c3c9.81286","name":"URL","topic":"","payload":"http://visual-recognition-demo.mybluemix.net/images/samples/2.jpg","payloadType":"str","repeat":"","crontab":"","once":false,"x":80.5,"y":67.50000095367432,"wires":[["80dbb6d5.e3c2a"]]},{"id":"80dbb6d5.e3c2a","type":"visual-recognition-v3","z":"8df7c3c9.81286","name":"Classify an image","apikey":"","image-feature":"classifyImage","x":474.5,"y":66.50000095367432,"wires":[["c4173410.87a9d8"]]},{"id":"6778819c.3e0b98","type":"inject","z":"8df7c3c9.81286","name":"URL","topic":"","payload":"http://visual-recognition-demo.mybluemix.net/images/samples/5.jpg","payloadType":"str","repeat":"","crontab":"","once":false,"x":83,"y":183.50000095367432,"wires":[["b17c9187.341888"]]},{"id":"b17c9187.341888","type":"visual-recognition-v3","z":"8df7c3c9.81286","name":"Recognize Text","apikey":"","image-feature":"recognizeText","x":459,"y":181.50000095367432,"wires":[["c4173410.87a9d8"]]},{"id":"1d7e0960.623967","type":"visual-recognition-v3","z":"8df7c3c9.81286","name":"Detect Faces","apikey":"","image-feature":"detectFaces","x":466.5,"y":256.5000009536743,"wires":[["c4173410.87a9d8"]]},{"id":"b1e575be.b7c6b8","type":"inject","z":"8df7c3c9.81286","name":"URL","topic":"","payload":"https://raw.githubusercontent.com/ylecleach/labs/master/node-red/basic-labs/visual-recognition/faces-1.jpg","payloadType":"str","repeat":"","crontab":"","once":false,"x":83,"y":256.5000009536743,"wires":[["1d7e0960.623967"]]},{"id":"c4173410.87a9d8","type":"debug","z":"8df7c3c9.81286","name":"","active":true,"console":"true","complete":"result","x":784.5,"y":112.50000095367432,"wires":[]},{"id":"33a8bf00.0aabb2","type":"inject","z":"8df7c3c9.81286","name":"binary buffer","topic":"","payload":"","payloadType":"date","repeat":"","crontab":"","once":false,"x":103.5,"y":106.50000095367432,"wires":[["7775242f.ce9b9c"]]},{"id":"7775242f.ce9b9c","type":"http request","z":"8df7c3c9.81286","name":"","method":"GET","ret":"bin","url":"https://visual-recognition-demo.mybluemix.net/images/samples/2.jpg","x":264.5,"y":107.50000095367432,"wires":[["80dbb6d5.e3c2a"]]},{"id":"b2164a66.060f","type":"inject","z":"8df7c3c9.81286","name":"binary buffer","topic":"","payload":"","payloadType":"date","repeat":"","crontab":"","once":false,"x":104.5,"y":146.50000095367432,"wires":[["455df41e.77e734"]]},{"id":"100dfe0d.d9e2ea","type":"inject","z":"8df7c3c9.81286","name":"binary buffer","topic":"","payload":"","payloadType":"date","repeat":"","crontab":"","once":false,"x":101,"y":292.5000009536743,"wires":[["123708b9.218627"]]},{"id":"44373044.948b7","type":"inject","z":"8df7c3c9.81286","name":"binary buffer","topic":"","payload":"","payloadType":"date","repeat":"","crontab":"","once":false,"x":103,"y":218.50000095367432,"wires":[["814d1c68.69c8"]]},{"id":"19576e23.a84d6a","type":"inject","z":"8df7c3c9.81286","name":"caricature test","topic":"","payload":"","payloadType":"date","repeat":"","crontab":"","once":false,"x":103.75000381469727,"y":340.25001525878906,"wires":[["35f4a44d.2faf9c"]]},{"id":"983fc363.bd5bc","type":"visual-recognition-v3","z":"8df7c3c9.81286","name":"Classify an image","apikey":"","image-feature":"classifyImage","x":485,"y":339.5,"wires":[["36b3186a.bbb1b"]]},{"id":"36b3186a.bbb1b","type":"debug","z":"8df7c3c9.81286","name":"","active":true,"console":"false","complete":"result","x":693.1250038146973,"y":361.50001525878906,"wires":[]},{"id":"224ce92e.53a62e","type":"comment","z":"8df7c3c9.81286","name":"Samples Files (click me)","info":"Here is the link where you can download all the sample files used in this sample flow :\n[Watson Visual Recognition v3 Sample Files](https://github.com/watson-developer-cloud/node-red-labs/tree/master/basic_examples/visual_recognition/sample_files)","x":423.12501525878906,"y":29,"wires":[]},{"id":"455df41e.77e734","type":"http request","z":"8df7c3c9.81286","name":"lego-2","method":"GET","ret":"bin","url":"https://raw.githubusercontent.com/ylecleach/labs/master/node-red/basic-labs/visual-recognition/lego-2.jpg","tls":"","x":250,"y":146,"wires":[["80dbb6d5.e3c2a"]]},{"id":"814d1c68.69c8","type":"http request","z":"8df7c3c9.81286","name":"text-5","method":"GET","ret":"bin","url":"https://raw.githubusercontent.com/ylecleach/labs/master/node-red/basic-labs/visual-recognition/text-5.jpg","tls":"","x":252,"y":219,"wires":[["b17c9187.341888"]]},{"id":"123708b9.218627","type":"http request","z":"8df7c3c9.81286","name":"Whoopy Golberg","method":"GET","ret":"bin","url":"https://raw.githubusercontent.com/ylecleach/labs/master/node-red/basic-labs/visual-recognition/faces-1.jpg","tls":"","x":286,"y":292,"wires":[["1d7e0960.623967"]]},{"id":"35f4a44d.2faf9c","type":"http request","z":"8df7c3c9.81286","name":"Caricature Devoxx","method":"GET","ret":"bin","url":"https://raw.githubusercontent.com/ylecleach/labs/master/node-red/basic-labs/visual-recognition/caricature-devoxx-france-2016.jpg","tls":"","x":283,"y":340,"wires":[["983fc363.bd5bc"]]}]
+[
+    {
+        "id": "9f998222.d22168",
+        "type": "comment",
+        "z": "b8968d03.7a49f",
+        "name": "Configure VR v3 nodes with the API Key !",
+        "info": "No Binding with Bluemix app is currently available for Watson Visual Recognition v3 service.\nThe API Key is available in the Bluemix Console in the Credentials section of the service detail.",
+        "x": 168.49996948242188,
+        "y": 24.366668701171875,
+        "wires": []
+    },
+    {
+        "id": "4cc3966e.4604f8",
+        "type": "inject",
+        "z": "b8968d03.7a49f",
+        "name": "URL of image (clothes)",
+        "topic": "",
+        "payload": "https://github.com/ylecleach/labs/raw/master/node-red/basic-labs/visual-recognition/clothes.jpg",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 130.5,
+        "y": 73.86666965484619,
+        "wires": [
+            [
+                "bb9d446b.6438e8"
+            ]
+        ]
+    },
+    {
+        "id": "bb9d446b.6438e8",
+        "type": "visual-recognition-v3",
+        "z": "b8968d03.7a49f",
+        "name": "Classify an image",
+        "apikey": "",
+        "image-feature": "classifyImage",
+        "x": 475.4999694824219,
+        "y": 76.86666870117188,
+        "wires": [
+            [
+                "58806c36.c1bde4"
+            ]
+        ]
+    },
+    {
+        "id": "b9ccb230.3b3268",
+        "type": "inject",
+        "z": "b8968d03.7a49f",
+        "name": "URL of image with text",
+        "topic": "",
+        "payload": "https://raw.githubusercontent.com/ylecleach/labs/master/node-red/basic-labs/visual-recognition/text-5.jpg",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 133.99996948242188,
+        "y": 159.86666870117188,
+        "wires": [
+            [
+                "3640a27d.824366"
+            ]
+        ]
+    },
+    {
+        "id": "3640a27d.824366",
+        "type": "visual-recognition-v3",
+        "z": "b8968d03.7a49f",
+        "name": "Recognize Text",
+        "apikey": "",
+        "image-feature": "recognizeText",
+        "x": 473.9999694824219,
+        "y": 158.86666870117188,
+        "wires": [
+            [
+                "996dd6b3.549ae"
+            ]
+        ]
+    },
+    {
+        "id": "a3910e81.823ca",
+        "type": "visual-recognition-v3",
+        "z": "b8968d03.7a49f",
+        "name": "Detect Faces",
+        "apikey": "",
+        "image-feature": "detectFaces",
+        "x": 467.4999694824219,
+        "y": 219.86666870117188,
+        "wires": [
+            [
+                "1dadce4a.84ab1a",
+                "85631b92.5c9ab"
+            ]
+        ]
+    },
+    {
+        "id": "58806c36.c1bde4",
+        "type": "debug",
+        "z": "b8968d03.7a49f",
+        "name": "",
+        "active": true,
+        "console": "true",
+        "complete": "result.images[0].classifiers[0]",
+        "x": 864.5,
+        "y": 118.86666965484619,
+        "wires": []
+    },
+    {
+        "id": "3bde17e.18ddde8",
+        "type": "inject",
+        "z": "b8968d03.7a49f",
+        "name": "binary buffer",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 103.5,
+        "y": 112.86666965484619,
+        "wires": [
+            [
+                "aa6021e4.0f147"
+            ]
+        ]
+    },
+    {
+        "id": "aa6021e4.0f147",
+        "type": "http request",
+        "z": "b8968d03.7a49f",
+        "name": "clothes",
+        "method": "GET",
+        "ret": "bin",
+        "url": "https://github.com/ylecleach/labs/raw/master/node-red/basic-labs/visual-recognition/clothes.jpg",
+        "tls": "",
+        "x": 254.5,
+        "y": 113.86666965484619,
+        "wires": [
+            [
+                "bb9d446b.6438e8"
+            ]
+        ]
+    },
+    {
+        "id": "ccae8be1.4c713",
+        "type": "inject",
+        "z": "b8968d03.7a49f",
+        "name": "binary buffer",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 104.99996948242188,
+        "y": 219.86666870117188,
+        "wires": [
+            [
+                "e38d9b20.e60068"
+            ]
+        ]
+    },
+    {
+        "id": "85b0815.fe829",
+        "type": "inject",
+        "z": "b8968d03.7a49f",
+        "name": "caricature test",
+        "topic": "f",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 108.74996948242188,
+        "y": 281.6166687011719,
+        "wires": [
+            [
+                "8ece02a4.54e8f8"
+            ]
+        ]
+    },
+    {
+        "id": "86d91593.ea0de8",
+        "type": "visual-recognition-v3",
+        "z": "b8968d03.7a49f",
+        "name": "Classify an image",
+        "apikey": "",
+        "image-feature": "classifyImage",
+        "x": 543,
+        "y": 283.8666687011719,
+        "wires": [
+            [
+                "58806c36.c1bde4"
+            ]
+        ]
+    },
+    {
+        "id": "e38d9b20.e60068",
+        "type": "http request",
+        "z": "b8968d03.7a49f",
+        "name": "Famous people",
+        "method": "GET",
+        "ret": "bin",
+        "url": "https://raw.githubusercontent.com/ylecleach/labs/master/node-red/basic-labs/visual-recognition/faces-1.jpg",
+        "tls": "",
+        "x": 281.9999694824219,
+        "y": 221.36666870117188,
+        "wires": [
+            [
+                "a3910e81.823ca"
+            ]
+        ]
+    },
+    {
+        "id": "8ece02a4.54e8f8",
+        "type": "http request",
+        "z": "b8968d03.7a49f",
+        "name": "Caricature with IBM text",
+        "method": "GET",
+        "ret": "bin",
+        "url": "https://raw.githubusercontent.com/ylecleach/labs/master/node-red/basic-labs/visual-recognition/caricature-devoxx-france-2016.jpg",
+        "tls": "",
+        "x": 305.9999694824219,
+        "y": 282.3666687011719,
+        "wires": [
+            [
+                "86d91593.ea0de8",
+                "84786bbd.9e8d78"
+            ]
+        ]
+    },
+    {
+        "id": "ff3ade68.37c748",
+        "type": "comment",
+        "z": "b8968d03.7a49f",
+        "name": "Create your Specific Classifiers ",
+        "info": "build new Specific Classifier to be used",
+        "x": 154.36666870117188,
+        "y": 345.3666687011719,
+        "wires": []
+    },
+    {
+        "id": "87b9f0e5.bd11b8",
+        "type": "visual-recognition-util-v3",
+        "z": "b8968d03.7a49f",
+        "name": "create a classifier",
+        "apikey": "",
+        "image-feature": "createClassifier",
+        "x": 670.36669921875,
+        "y": 479.36669921875,
+        "wires": [
+            [
+                "f671938.11321f",
+                "9cd4646f.4b1f9"
+            ]
+        ]
+    },
+    {
+        "id": "3308ef63.1c0ba",
+        "type": "visual-recognition-util-v3",
+        "z": "b8968d03.7a49f",
+        "name": "get classifiers list",
+        "apikey": "",
+        "image-feature": "retrieveClassifiersList",
+        "x": 669.36669921875,
+        "y": 524.36669921875,
+        "wires": [
+            [
+                "f671938.11321f"
+            ]
+        ]
+    },
+    {
+        "id": "3d57a5a1.89cb2a",
+        "type": "visual-recognition-util-v3",
+        "z": "b8968d03.7a49f",
+        "name": "get classifier details",
+        "apikey": "",
+        "image-feature": "retrieveClassifierDetails",
+        "x": 673.36669921875,
+        "y": 573.36669921875,
+        "wires": [
+            [
+                "f671938.11321f"
+            ]
+        ]
+    },
+    {
+        "id": "da7d3f05.85912",
+        "type": "visual-recognition-util-v3",
+        "z": "b8968d03.7a49f",
+        "name": "delete a classifier",
+        "apikey": "",
+        "image-feature": "deleteClassifier",
+        "x": 675.36669921875,
+        "y": 701.36669921875,
+        "wires": [
+            [
+                "f671938.11321f"
+            ]
+        ]
+    },
+    {
+        "id": "abb139c4.8c1ef8",
+        "type": "inject",
+        "z": "b8968d03.7a49f",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 107.36666870117188,
+        "y": 384.3666687011719,
+        "wires": [
+            [
+                "d28f6ca0.57f6f8"
+            ]
+        ]
+    },
+    {
+        "id": "5682fe5b.029ef",
+        "type": "inject",
+        "z": "b8968d03.7a49f",
+        "name": "Get Classifiers List",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 146.36666870117188,
+        "y": 524.3666687011719,
+        "wires": [
+            [
+                "3308ef63.1c0ba"
+            ]
+        ]
+    },
+    {
+        "id": "f7196955.229768",
+        "type": "inject",
+        "z": "b8968d03.7a49f",
+        "name": "Get Classifier Details (and status)",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 185.36666870117188,
+        "y": 570.3666687011719,
+        "wires": [
+            [
+                "2b0cde73.b6013a"
+            ]
+        ]
+    },
+    {
+        "id": "d210fc9b.9df94",
+        "type": "inject",
+        "z": "b8968d03.7a49f",
+        "name": "Delete classifier",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 134.36666870117188,
+        "y": 694.36669921875,
+        "wires": [
+            [
+                "44af1796.881908"
+            ]
+        ]
+    },
+    {
+        "id": "f671938.11321f",
+        "type": "debug",
+        "z": "b8968d03.7a49f",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "result",
+        "x": 952.36669921875,
+        "y": 574.36669921875,
+        "wires": []
+    },
+    {
+        "id": "d28f6ca0.57f6f8",
+        "type": "function",
+        "z": "b8968d03.7a49f",
+        "name": "set name",
+        "func": "msg.params={'name':'retrievers'};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 251.36666870117188,
+        "y": 384.3666687011719,
+        "wires": [
+            [
+                "8e6f40c9.a4b388"
+            ]
+        ]
+    },
+    {
+        "id": "44af1796.881908",
+        "type": "function",
+        "z": "b8968d03.7a49f",
+        "name": "get classifier_id",
+        "func": "msg.params={'classifier_id':flow.get(\"myclassifier_id\")||\"\"};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 385.8666687011719,
+        "y": 697.36669921875,
+        "wires": [
+            [
+                "da7d3f05.85912"
+            ]
+        ]
+    },
+    {
+        "id": "8e6f40c9.a4b388",
+        "type": "http request",
+        "z": "b8968d03.7a49f",
+        "name": "retrievers images",
+        "method": "GET",
+        "ret": "bin",
+        "url": "https://raw.githubusercontent.com/ylecleach/labs/master/node-red/basic-labs/visual-recognition/retrievers_positive.zip",
+        "tls": "",
+        "x": 163.36666870117188,
+        "y": 429.20001220703125,
+        "wires": [
+            [
+                "41da241d.7d1dbc"
+            ]
+        ]
+    },
+    {
+        "id": "7678b4a7.b2ad0c",
+        "type": "change",
+        "z": "b8968d03.7a49f",
+        "name": "set negatives examples",
+        "rules": [
+            {
+                "t": "set",
+                "p": "params.negative_examples",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 351.3666687011719,
+        "y": 477.5333251953125,
+        "wires": [
+            [
+                "87b9f0e5.bd11b8"
+            ]
+        ]
+    },
+    {
+        "id": "925934a9.baecd",
+        "type": "http request",
+        "z": "b8968d03.7a49f",
+        "name": "retrievers images",
+        "method": "GET",
+        "ret": "bin",
+        "url": "https://raw.githubusercontent.com/ylecleach/labs/master/node-red/basic-labs/visual-recognition/retrievers_negative.zip",
+        "tls": "",
+        "x": 122.36666870117188,
+        "y": 473.5333251953125,
+        "wires": [
+            [
+                "7678b4a7.b2ad0c"
+            ]
+        ]
+    },
+    {
+        "id": "41da241d.7d1dbc",
+        "type": "function",
+        "z": "b8968d03.7a49f",
+        "name": "set positives examples",
+        "func": "msg2 = {};\nmsg2.payload=\"\";\nmsg2.params = msg.params;\nmsg2.params.retrievers_positive_examples=msg.payload;\nreturn msg2;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 377.2333679199219,
+        "y": 429.433349609375,
+        "wires": [
+            [
+                "925934a9.baecd"
+            ]
+        ]
+    },
+    {
+        "id": "9dbf010f.e8d9a8",
+        "type": "inject",
+        "z": "b8968d03.7a49f",
+        "name": "Delete All Classifiers",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 147.36666870117188,
+        "y": 758.2333374023438,
+        "wires": [
+            [
+                "6af2d10e.ca1e28"
+            ]
+        ]
+    },
+    {
+        "id": "6af2d10e.ca1e28",
+        "type": "visual-recognition-util-v3",
+        "z": "b8968d03.7a49f",
+        "name": "delete All classifiers",
+        "apikey": "",
+        "image-feature": "deleteAllClassifiers",
+        "x": 677.36669921875,
+        "y": 757.2333374023438,
+        "wires": [
+            [
+                "f671938.11321f"
+            ]
+        ]
+    },
+    {
+        "id": "30a905e6.cfea52",
+        "type": "inject",
+        "z": "b8968d03.7a49f",
+        "name": "binary buffer",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 118.36666870117188,
+        "y": 852.6667175292969,
+        "wires": [
+            [
+                "7ff92b36.664b24"
+            ]
+        ]
+    },
+    {
+        "id": "7ff92b36.664b24",
+        "type": "function",
+        "z": "b8968d03.7a49f",
+        "name": "set classifier_ids",
+        "func": "msg.params={};\nmsg.params[\"classifier_ids\"]=flow.get(\"myclassifier_id\")||\"\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 297.3666687011719,
+        "y": 853.6667175292969,
+        "wires": [
+            [
+                "7e8b6b75.e8b5b4"
+            ]
+        ]
+    },
+    {
+        "id": "1cda35b2.f4e3b2",
+        "type": "visual-recognition-v3",
+        "z": "b8968d03.7a49f",
+        "name": "Classify an image",
+        "apikey": "",
+        "image-feature": "classifyImage",
+        "x": 539.36669921875,
+        "y": 921.6667785644531,
+        "wires": [
+            [
+                "b78c591e.9fd6"
+            ]
+        ]
+    },
+    {
+        "id": "b78c591e.9fd6",
+        "type": "debug",
+        "z": "b8968d03.7a49f",
+        "name": "",
+        "active": true,
+        "console": "true",
+        "complete": "result",
+        "x": 770.3666687011719,
+        "y": 916.6667175292969,
+        "wires": []
+    },
+    {
+        "id": "beb71e3c.ee61c",
+        "type": "inject",
+        "z": "b8968d03.7a49f",
+        "name": "binary buffer",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 119.36666870117188,
+        "y": 905.6667175292969,
+        "wires": [
+            [
+                "fa268a54.2ee018"
+            ]
+        ]
+    },
+    {
+        "id": "fa268a54.2ee018",
+        "type": "function",
+        "z": "b8968d03.7a49f",
+        "name": "set owners",
+        "func": "msg.params={};\nmsg.params[\"owners\"]=\"me,IBM\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 288.3666687011719,
+        "y": 906.6667175292969,
+        "wires": [
+            [
+                "7e8b6b75.e8b5b4"
+            ]
+        ]
+    },
+    {
+        "id": "5a870f52.5ead3",
+        "type": "comment",
+        "z": "b8968d03.7a49f",
+        "name": "Advanced Options",
+        "info": "build new Specific Classifier to be used",
+        "x": 114.36666870117188,
+        "y": 811.666748046875,
+        "wires": []
+    },
+    {
+        "id": "d42151d0.ce0f5",
+        "type": "inject",
+        "z": "b8968d03.7a49f",
+        "name": "binary buffer",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 117.36666870117188,
+        "y": 957.6667175292969,
+        "wires": [
+            [
+                "74515132.432388"
+            ]
+        ]
+    },
+    {
+        "id": "74515132.432388",
+        "type": "function",
+        "z": "b8968d03.7a49f",
+        "name": "set threshold",
+        "func": "msg.params={};\nmsg.params[\"threshold\"]=\"0.3\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 289.3666687011719,
+        "y": 959.6667175292969,
+        "wires": [
+            [
+                "7e8b6b75.e8b5b4"
+            ]
+        ]
+    },
+    {
+        "id": "7e8b6b75.e8b5b4",
+        "type": "http request",
+        "z": "b8968d03.7a49f",
+        "name": "dog image",
+        "method": "GET",
+        "ret": "bin",
+        "url": "https://github.com/ylecleach/labs/raw/master/node-red/basic-labs/visual-recognition/4-dog.jpg",
+        "tls": "",
+        "x": 488.36669921875,
+        "y": 865.666748046875,
+        "wires": [
+            [
+                "1cda35b2.f4e3b2"
+            ]
+        ]
+    },
+    {
+        "id": "84786bbd.9e8d78",
+        "type": "visual-recognition-v3",
+        "z": "b8968d03.7a49f",
+        "name": "Recognize Text",
+        "apikey": "",
+        "image-feature": "recognizeText",
+        "x": 534.36669921875,
+        "y": 330.6333312988281,
+        "wires": [
+            [
+                "996dd6b3.549ae"
+            ]
+        ]
+    },
+    {
+        "id": "996dd6b3.549ae",
+        "type": "debug",
+        "z": "b8968d03.7a49f",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "result.images[0].text",
+        "x": 813.2333984375,
+        "y": 296.6333312988281,
+        "wires": []
+    },
+    {
+        "id": "1dadce4a.84ab1a",
+        "type": "debug",
+        "z": "b8968d03.7a49f",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "result",
+        "x": 786.2333984375,
+        "y": 188.63333129882812,
+        "wires": []
+    },
+    {
+        "id": "85631b92.5c9ab",
+        "type": "debug",
+        "z": "b8968d03.7a49f",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "result.images[0].faces[0].identity.name",
+        "x": 885.36669921875,
+        "y": 230.36666870117188,
+        "wires": []
+    },
+    {
+        "id": "9cd4646f.4b1f9",
+        "type": "function",
+        "z": "b8968d03.7a49f",
+        "name": "store classifier id in flow context",
+        "func": "// https://nodered.org/docs/writing-functions#flow-context\nflow.set(\"myclassifier_id\",msg.result.classifier_id);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 923.2333984375,
+        "y": 418.36669921875,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b0cde73.b6013a",
+        "type": "function",
+        "z": "b8968d03.7a49f",
+        "name": "get classifier_id",
+        "func": "msg.params={'classifier_id':flow.get(\"myclassifier_id\")||\"\"};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 451.3666687011719,
+        "y": 569.1666870117188,
+        "wires": [
+            [
+                "3d57a5a1.89cb2a"
+            ]
+        ]
+    },
+    {
+        "id": "2db9a3ff.243094",
+        "type": "inject",
+        "z": "b8968d03.7a49f",
+        "name": "Test classifier",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 123.23336791992188,
+        "y": 635.63330078125,
+        "wires": [
+            [
+                "bde4c6c.81aa8b8"
+            ]
+        ]
+    },
+    {
+        "id": "bde4c6c.81aa8b8",
+        "type": "http request",
+        "z": "b8968d03.7a49f",
+        "name": "Retriever",
+        "method": "GET",
+        "ret": "bin",
+        "url": "https://github.com/ylecleach/labs/raw/master/node-red/basic-labs/visual-recognition/4-dog.jpg",
+        "tls": "",
+        "x": 283.3666687011719,
+        "y": 634.9666748046875,
+        "wires": [
+            [
+                "ffffdab1.a07a18"
+            ]
+        ]
+    },
+    {
+        "id": "ffffdab1.a07a18",
+        "type": "function",
+        "z": "b8968d03.7a49f",
+        "name": "set classifier_ids",
+        "func": "msg.params={};\nmsg.params[\"classifier_ids\"]=flow.get(\"myclassifier_id\")||\"\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 475.3666687011719,
+        "y": 634.9666748046875,
+        "wires": [
+            [
+                "8d050076.fd5ba"
+            ]
+        ]
+    },
+    {
+        "id": "8d050076.fd5ba",
+        "type": "visual-recognition-v3",
+        "z": "b8968d03.7a49f",
+        "name": "Classify an image",
+        "apikey": "",
+        "image-feature": "classifyImage",
+        "lang": "en",
+        "x": 675.36669921875,
+        "y": 634.9666748046875,
+        "wires": [
+            [
+                "90149f70.0c1028"
+            ]
+        ]
+    },
+    {
+        "id": "90149f70.0c1028",
+        "type": "debug",
+        "z": "b8968d03.7a49f",
+        "name": "",
+        "active": true,
+        "console": "true",
+        "complete": "result.images[0].classifiers[0]",
+        "x": 1012.36669921875,
+        "y": 640.63330078125,
+        "wires": []
+    }
+]
